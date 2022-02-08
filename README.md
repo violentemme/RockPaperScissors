@@ -1,2 +1,2 @@
 # RockPaperScissorsCC
-The 'Rock/Paper/Scissors' assignment from Codecademy
+A simple little game where you play 'Rock/Paper/Scissors' against the computer.
