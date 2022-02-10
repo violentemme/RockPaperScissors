@@ -1,6 +1,6 @@
 const getUserChoice = userInput => {
     userInput = userInput.toLowerCase();
-    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
+    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
         return userInput;
     } else {
         return console.log('Invalid input');
@@ -20,6 +20,9 @@ const getComputerChoice = () => {
 }
 
 const determineWinner = (userChoice, computerChoice) => {
+    if (userChoice === 'bomb') {
+      return 'You chose to go nuclear and have won, but at what cost?'
+    }
     if (userChoice === computerChoice) {
         return 'You\'ve tied!'
     };
@@ -47,7 +50,7 @@ const determineWinner = (userChoice, computerChoice) => {
 };
 
 const playGame = () => {
-    const userChoice = getUserChoice('scissors');
+    const userChoice = getUserChoice('bomb');
     const computerChoice = getComputerChoice();
     console.log(`You threw ${userChoice}!`);
     console.log(`The computer threw ${computerChoice}!`);
